@@ -1,11 +1,13 @@
 header {
   @include flexbox(space-between, center, row);
   height: 6.25rem;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
+  padding-inline: 10%;
 
   .logo {
     @include flexbox(undefined, undefined, row);
+    margin-block: 0.625rem;
 
     img {
       display: block;
@@ -25,6 +27,95 @@ header {
         color: $clr-soft-grey;
         font-size: 0.5rem;
       }
+    }
+  }
+
+  .nav {
+    position: fixed;
+    background: $clr-light;
+    color: $clr-dark;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    transform: translateX(100%);
+    transition: transform 250ms ease-in-out;
+    -webkit-transition: transform 250ms ease-in-out;
+    -moz-transition: transform 250ms ease-in-out;
+    -ms-transition: transform 250ms ease-in-out;
+    -o-transition: transform 250ms ease-in-out;
+  }
+
+  .nav-toggle {
+    display: none;
+    position: relative;
+    padding: 0.5em;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    right: 1rem;
+    z-index: 1000;
+  }
+
+  .nav-open .nav {
+    transform: translateX(75%);
+    -webkit-transform: translateX(75%);
+    -moz-transform: translateX(75%);
+    -ms-transform: translateX(75%);
+    -o-transform: translateX(75%);
+  }
+
+  .nav-open .hamburger {
+    transform: rotate(0.625turn);
+  }
+
+  .nav-open .hamburger::before {
+    transform: rotate(90deg) translateX(-6px);
+  }
+
+  .nav-open .hamburger::after {
+    opacity: 0;
+  }
+
+  .hamburger {
+    display: block;
+    position: relative;
+  }
+
+  .hamburger,
+  .hamburger::before,
+  .hamburger::after {
+    background: $clr-dark;
+    width: 1.5em;
+    height: 3px;
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out;
+  }
+
+  .hamburger::before,
+  .hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+
+  .hamburger::before {
+    top: 6px;
+  }
+  .hamburger::after {
+    bottom: 6px;
+  }
+
+  @media (max-width: 1200px) {
+    position: fixed;
+    height: auto;
+    background: $clr-light;
+    z-index: 2;
+
+    .nav-toggle {
+      display: block;
     }
   }
 }

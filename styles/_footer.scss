@@ -1,8 +1,9 @@
 footer {
   @include flexbox(center, center, column);
   padding-bottom: 4.8125rem;
+  text-align: center;
 
-  button {
+  .button {
     padding: 0.8125rem 1.6875rem;
     color: $clr-accent;
     cursor: pointer;
@@ -22,6 +23,7 @@ footer {
 
     &:hover {
       background: #fa879a;
+      color: $clr-light;
     }
   }
 
@@ -44,6 +46,17 @@ footer {
   .social-icons {
     width: 9.375rem;
     @include flexbox(space-between, center, row);
+  }
+
+  .fab {
     color: $clr-soft-grey;
+
+    &:hover {
+      color: $clr-accent;
+    }
+
+    &:active {
+      opacity: 0.8;
+    }
   }
 }
