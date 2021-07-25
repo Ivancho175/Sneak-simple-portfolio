@@ -25,14 +25,15 @@
   &__description {
     @include fontStyle(1.0625rem, inherit, $fw-reg, $clr-light, undefined);
     letter-spacing: 0.24rem;
+    margin-bottom: 3.125rem;
   }
 
-  button {
+  .button {
     padding: 0.8125rem 1.6875rem;
+    background: $clr-light;
     color: $clr-accent;
     cursor: pointer;
     border: none;
-    margin-top: 3.125rem;
     transition: transform 200ms ease-in-out;
 
     &:active {

@@ -34,6 +34,50 @@ img {
   max-width: 100%;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav__list {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.nav__item {
+  padding: 0.8125rem 1.6875rem;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 200ms ease-in-out;
+  transition: -webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+}
+
+.nav__item:active {
+  transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  -moz-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  -o-transform: scale(0.95);
+}
+
+.nav__item:hover {
+  background: #ff5672;
+  color: #ffffff;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -89,45 +133,6 @@ header .logo__text--description {
   font-size: 0.5rem;
 }
 
-header .nav__list {
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-header .nav__item {
-  padding: 0.8125rem 1.6875rem;
-  cursor: pointer;
-  -webkit-transition: -webkit-transform 200ms ease-in-out;
-  transition: -webkit-transform 200ms ease-in-out;
-  transition: transform 200ms ease-in-out;
-  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
-}
-
-header .nav__item:active {
-  transform: scale(0.95);
-  -webkit-transform: scale(0.95);
-  -moz-transform: scale(0.95);
-  -ms-transform: scale(0.95);
-  -o-transform: scale(0.95);
-}
-
-header .nav__item:hover {
-  background: #ff5672;
-  color: #ffffff;
-}
-
 .hero {
   position: relative;
   display: -webkit-box;
@@ -176,21 +181,22 @@ header .nav__item:hover {
   color: #ffffff;
   text-transform: undefined;
   letter-spacing: 0.24rem;
+  margin-bottom: 3.125rem;
 }
 
-.hero button {
+.hero .button {
   padding: 0.8125rem 1.6875rem;
+  background: #ffffff;
   color: #ff5672;
   cursor: pointer;
   border: none;
-  margin-top: 3.125rem;
   -webkit-transition: -webkit-transform 200ms ease-in-out;
   transition: -webkit-transform 200ms ease-in-out;
   transition: transform 200ms ease-in-out;
   transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
 }
 
-.hero button:active {
+.hero .button:active {
   transform: scale(0.95);
   -webkit-transform: scale(0.95);
   -moz-transform: scale(0.95);
@@ -198,7 +204,7 @@ header .nav__item:hover {
   -o-transform: scale(0.95);
 }
 
-.hero button:hover {
+.hero .button:hover {
   background: #ff5672;
   color: #ffffff;
 }
@@ -243,8 +249,11 @@ header .nav__item:hover {
   cursor: pointer;
 }
 
+.portfolio .nav {
+  margin-bottom: 4.6875rem;
+}
+
 .portfolio .nav__list {
-  list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -260,36 +269,20 @@ header .nav__item:hover {
           flex-direction: row;
 }
 
-.portfolio .nav__item {
-  padding: 0.8125rem 1.6875rem;
-  cursor: pointer;
-  -webkit-transition: -webkit-transform 200ms ease-in-out;
-  transition: -webkit-transform 200ms ease-in-out;
-  transition: transform 200ms ease-in-out;
-  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
-}
-
-.portfolio .nav__item:active {
-  transform: scale(0.95);
-  -webkit-transform: scale(0.95);
-  -moz-transform: scale(0.95);
-  -ms-transform: scale(0.95);
-  -o-transform: scale(0.95);
-}
-
-.portfolio .nav__item:hover {
-  background: #ff5672;
-  color: #ffffff;
-}
-
 .portfolio .grid {
-  display: -ms-grid;
-  display: grid;
   width: 73.125rem;
   height: auto;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 20px;
+  -webkit-column-count: 3;
+          column-count: 3;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+  row-gap: 20px;
+}
+
+.portfolio .grid img {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 footer {
