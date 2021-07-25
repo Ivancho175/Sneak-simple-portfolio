@@ -1,0 +1,49 @@
+footer {
+  @include flexbox(center, center, column);
+  padding-bottom: 4.8125rem;
+
+  button {
+    padding: 0.8125rem 1.6875rem;
+    color: $clr-accent;
+    cursor: pointer;
+    border: none;
+    margin-top: 3.125rem;
+    transition: transform 200ms ease-in-out;
+    background: $clr-accent;
+    color: $clr-light;
+
+    &:active {
+      transform: scale(0.95);
+      -webkit-transform: scale(0.95);
+      -moz-transform: scale(0.95);
+      -ms-transform: scale(0.95);
+      -o-transform: scale(0.95);
+    }
+
+    &:hover {
+      background: #fa879a;
+    }
+  }
+
+  p {
+    color: $clr-soft-grey;
+    letter-spacing: 0.2rem;
+    margin-block: 4.8125rem 2.875rem;
+  }
+
+  a {
+    color: $clr-accent;
+    text-decoration: none;
+    letter-spacing: 0.2rem;
+
+    &:hover {
+      color: #fa879a;
+    }
+  }
+
+  .social-icons {
+    width: 9.375rem;
+    @include flexbox(space-between, center, row);
+    color: $clr-soft-grey;
+  }
+}

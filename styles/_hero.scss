@@ -1,0 +1,51 @@
+.hero {
+  position: relative;
+  @include flexbox(center, center, column);
+  background: #fc758c;
+  width: 100%;
+  height: 56.25rem;
+  text-align: center;
+
+  &__container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+  }
+
+  &__title {
+    @include fontStyle(2.5rem, inherit, $fw-bold, $clr-light, undefined);
+    letter-spacing: 1rem;
+    margin-bottom: 3.125rem;
+  }
+
+  &__description {
+    @include fontStyle(1.0625rem, inherit, $fw-reg, $clr-light, undefined);
+    letter-spacing: 0.24rem;
+  }
+
+  button {
+    padding: 0.8125rem 1.6875rem;
+    color: $clr-accent;
+    cursor: pointer;
+    border: none;
+    margin-top: 3.125rem;
+    transition: transform 200ms ease-in-out;
+
+    &:active {
+      transform: scale(0.95);
+      -webkit-transform: scale(0.95);
+      -moz-transform: scale(0.95);
+      -ms-transform: scale(0.95);
+      -o-transform: scale(0.95);
+    }
+
+    &:hover {
+      background: $clr-accent;
+      color: $clr-light;
+    }
+  }
+}

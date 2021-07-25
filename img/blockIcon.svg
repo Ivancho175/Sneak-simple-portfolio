@@ -1,0 +1,12 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" width="14" height="14">
+	<title>Section</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #ff5672 } 
+	</style>
+	<g id="Section">
+		<g id="Navigation">
+			<path id="Block Icon" class="shp0" d="M0 6L6 6L6 0L0 0L0 6ZM8 0L8 6L14 6L14 0L8 0ZM0 14L6 14L6 8L0 8L0 14ZM8 14L14 14L14 8L8 8L8 14Z" />
+		</g>
+	</g>
+</svg>

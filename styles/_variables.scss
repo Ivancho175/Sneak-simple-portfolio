@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+$clr-light: #ffffff;
+$clr-dark: #707070;
+$clr-soft-grey: #ccd7dd;
+$clr-accent: #ff5672;
+
+$fw-reg: 400;
+$fw-bold: 700;
+
+@mixin flexbox($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@mixin fontStyle($size, $l-height, $weight, $color, $text-transform) {
+  font-size: $size;
+  line-height: $l-height;
+  font-weight: $weight;
+  color: $color;
+  text-transform: $text-transform;
+}

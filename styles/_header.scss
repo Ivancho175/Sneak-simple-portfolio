@@ -1,0 +1,56 @@
+header {
+  @include flexbox(space-between, center, row);
+  height: 6.25rem;
+  width: 80%;
+  margin: 0 auto;
+
+  .logo {
+    @include flexbox(undefined, undefined, row);
+
+    img {
+      display: block;
+      width: 33px;
+      height: 35px;
+    }
+
+    &__text {
+      display: block;
+      margin-left: 1.3125rem;
+
+      &--title {
+        font-size: 1.1875rem;
+      }
+
+      &--description {
+        color: $clr-soft-grey;
+        font-size: 0.5rem;
+      }
+    }
+  }
+
+  .nav {
+    &__list {
+      list-style: none;
+      @include flexbox(space-between, center, row);
+    }
+
+    &__item {
+      padding: 0.8125rem 1.6875rem;
+      cursor: pointer;
+      transition: transform 200ms ease-in-out;
+
+      &:active {
+        transform: scale(0.95);
+        -webkit-transform: scale(0.95);
+        -moz-transform: scale(0.95);
+        -ms-transform: scale(0.95);
+        -o-transform: scale(0.95);
+      }
+
+      &:hover {
+        background: $clr-accent;
+        color: $clr-light;
+      }
+    }
+  }
+}

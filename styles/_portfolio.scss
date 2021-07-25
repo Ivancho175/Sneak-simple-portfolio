@@ -1,0 +1,49 @@
+.portfolio {
+  @include flexbox(center, center, column);
+  padding-bottom: 4.8125rem;
+
+  .display-icons-container {
+    width: 3.3125rem;
+    margin: 4.375rem auto;
+    @include flexbox(space-between, center, row);
+
+    .gallery,
+    .list {
+      cursor: pointer;
+    }
+  }
+
+  .nav {
+    &__list {
+      list-style: none;
+      @include flexbox(center, center, row);
+    }
+
+    &__item {
+      padding: 0.8125rem 1.6875rem;
+      cursor: pointer;
+      transition: transform 200ms ease-in-out;
+
+      &:active {
+        transform: scale(0.95);
+        -webkit-transform: scale(0.95);
+        -moz-transform: scale(0.95);
+        -ms-transform: scale(0.95);
+        -o-transform: scale(0.95);
+      }
+
+      &:hover {
+        background: $clr-accent;
+        color: $clr-light;
+      }
+    }
+  }
+
+  .grid {
+    display: grid;
+    width: 73.125rem;
+    height: auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+  }
+}
