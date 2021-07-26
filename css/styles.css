@@ -264,6 +264,103 @@ header .hamburger::after {
   }
 }
 
+header .search-box {
+  border: solid 3px #ff5672;
+  display: inline-block;
+  position: relative;
+  border-radius: 75px;
+  -webkit-border-radius: 75px;
+  -moz-border-radius: 75px;
+  -ms-border-radius: 75px;
+  -o-border-radius: 75px;
+}
+
+header .search-box input[type='text'] {
+  font-family: 'Questrial', sans-serif;
+  font-size: 1rem;
+  line-height: inherit;
+  font-weight: 400;
+  color: #707070;
+  text-transform: capitalize;
+  width: 30px;
+  height: 30px;
+  padding: 5px 40px 5px 10px;
+  border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 50px;
+  -webkit-transition: width 800ms cubic-bezier(0.5, -0.5, 0.5, 0.5) 600ms;
+  transition: width 800ms cubic-bezier(0.5, -0.5, 0.5, 0.5) 600ms;
+}
+
+header .search-box input[type='text']:focus {
+  outline: none;
+}
+
+header .search-box input[type='text']:focus,
+header .search-box input[type='text']:not(:placeholder-shown) {
+  width: 300px;
+  min-width: 20px;
+  -webkit-transition: width 800ms cubic-bezier(0.5, -0.5, 0.5, 1.5);
+  transition: width 800ms cubic-bezier(0.5, -0.5, 0.5, 1.5);
+}
+
+header .search-box input[type='text']:focus + span,
+header .search-box input[type='text']:not(:placeholder-shown) + span {
+  bottom: 13px;
+  right: 10px;
+  -webkit-transition: bottom 300ms ease-out 800ms, right 300ms ease-out 800ms;
+  transition: bottom 300ms ease-out 800ms, right 300ms ease-out 800ms;
+}
+
+header .search-box input[type='text']:focus + span:after,
+header .search-box input[type='text']:not(:placeholder-shown) + span:after {
+  top: 0;
+  right: 10px;
+  opacity: 1;
+  -webkit-transition: top 300ms ease-out 1100ms, right 300ms ease-out 1100ms, opacity 300ms ease 1100ms;
+  transition: top 300ms ease-out 1100ms, right 300ms ease-out 1100ms, opacity 300ms ease 1100ms;
+}
+
+header .search-box span {
+  width: 20px;
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  bottom: -13px;
+  right: -15px;
+  -webkit-transition: bottom 300ms ease-out 300ms, right 300ms ease-out 300ms;
+  transition: bottom 300ms ease-out 300ms, right 300ms ease-out 300ms;
+}
+
+header .search-box span:before,
+header .search-box span:after {
+  content: '';
+  height: 20px;
+  border-left: solid 3px #ff5672;
+  position: absolute;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+header .search-box span:after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  opacity: 0;
+  top: -20px;
+  right: -10px;
+  -webkit-transition: top 300ms ease-out, right 300ms ease-out, opacity 300ms ease-out;
+  transition: top 300ms ease-out, right 300ms ease-out, opacity 300ms ease-out;
+}
+
 .hero {
   position: relative;
   display: -webkit-box;
