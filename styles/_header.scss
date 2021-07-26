@@ -92,21 +92,21 @@ header {
       -moz-transition: transform 250ms ease-in-out;
       -ms-transition: transform 250ms ease-in-out;
       -o-transition: transform 250ms ease-in-out;
-    }
 
-    .nav__list {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      right: 50%;
-      height: 100%;
-      @include fontStyle(2.5rem, inherit, $fw-bold, $clr-dark, uppercase);
-      @include flexbox(space-evenly, center, column);
-      transform: translateY(-50%);
-      -webkit-transform: translateY(-50%);
-      -moz-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      -o-transform: translateY(-50%);
+      &__list {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        right: 50%;
+        height: 100%;
+        @include fontStyle(2.5rem, inherit, $fw-bold, $clr-dark, uppercase);
+        @include flexbox(space-evenly, center, column);
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+      }
     }
 
     .nav-toggle {
@@ -118,18 +118,18 @@ header {
     border: solid 3px $clr-accent;
     display: inline-block;
     position: relative;
-    border-radius: 75px;
-    -webkit-border-radius: 75px;
-    -moz-border-radius: 75px;
-    -ms-border-radius: 75px;
-    -o-border-radius: 75px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
   }
   .search-box input[type='text'] {
     font-family: 'Questrial', sans-serif;
     @include fontStyle(1rem, inherit, $fw-reg, $clr-dark, capitalize);
-    width: 30px;
-    height: 30px;
-    padding: 5px 40px 5px 10px;
+    width: 20px;
+    height: 20px;
+    padding: 5px 10px 5px 10px;
     border: none;
     box-sizing: border-box;
     border-radius: 50px;
@@ -146,7 +146,7 @@ header {
   }
   .search-box input[type='text']:focus + span,
   .search-box input[type='text']:not(:placeholder-shown) + span {
-    bottom: 13px;
+    bottom: 0px;
     right: 10px;
     transition: bottom 300ms ease-out 800ms, right 300ms ease-out 800ms;
   }
@@ -183,5 +183,11 @@ header {
     top: -20px;
     right: -10px;
     transition: top 300ms ease-out, right 300ms ease-out, opacity 300ms ease-out;
+  }
+
+  @media (max-width: 1200px) {
+    .search-box {
+      display: none;
+    }
   }
 }

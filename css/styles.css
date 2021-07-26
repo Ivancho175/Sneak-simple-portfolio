@@ -268,11 +268,11 @@ header .search-box {
   border: solid 3px #ff5672;
   display: inline-block;
   position: relative;
-  border-radius: 75px;
-  -webkit-border-radius: 75px;
-  -moz-border-radius: 75px;
-  -ms-border-radius: 75px;
-  -o-border-radius: 75px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
 }
 
 header .search-box input[type='text'] {
@@ -282,9 +282,9 @@ header .search-box input[type='text'] {
   font-weight: 400;
   color: #707070;
   text-transform: capitalize;
-  width: 30px;
-  height: 30px;
-  padding: 5px 40px 5px 10px;
+  width: 20px;
+  height: 20px;
+  padding: 5px 10px 5px 10px;
   border: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -307,7 +307,7 @@ header .search-box input[type='text']:not(:placeholder-shown) {
 
 header .search-box input[type='text']:focus + span,
 header .search-box input[type='text']:not(:placeholder-shown) + span {
-  bottom: 13px;
+  bottom: 0px;
   right: 10px;
   -webkit-transition: bottom 300ms ease-out 800ms, right 300ms ease-out 800ms;
   transition: bottom 300ms ease-out 800ms, right 300ms ease-out 800ms;
@@ -359,6 +359,12 @@ header .search-box span:after {
   right: -10px;
   -webkit-transition: top 300ms ease-out, right 300ms ease-out, opacity 300ms ease-out;
   transition: top 300ms ease-out, right 300ms ease-out, opacity 300ms ease-out;
+}
+
+@media (max-width: 1200px) {
+  header .search-box {
+    display: none;
+  }
 }
 
 .hero {
@@ -517,12 +523,26 @@ header .search-box span:after {
 .portfolio .container .image {
   display: inline-block;
   width: 100%;
+  background: #ff5672;
   margin-block: 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   border-radius: 5px;
-  -webkit-border-radius: 5px;
+  -webkit-border-radius: 5px !important;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
+}
+
+.portfolio .container .image:hover {
+  opacity: 0.8;
+  overflow: hidden;
+  transform: scale(1.03);
+  -webkit-transform: scale(1.03);
+  -moz-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  -o-transform: scale(1.03);
 }
 
 @media (max-width: 1200px) {
@@ -538,8 +558,6 @@ header .search-box span:after {
     overflow-x: visible;
   }
   .portfolio .image {
-    display: inline-block;
-    width: 100%;
     margin-bottom: 15px;
   }
 }
@@ -554,8 +572,6 @@ header .search-box span:after {
     overflow-x: visible;
   }
   .portfolio .image {
-    display: inline-block;
-    width: 100%;
     margin-bottom: 10px;
   }
 }
