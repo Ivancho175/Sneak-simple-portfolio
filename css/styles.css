@@ -78,6 +78,28 @@ a {
   color: #ffffff;
 }
 
+.nav-open .nav {
+  transform: translateX(0%);
+  -webkit-transform: translateX(0%);
+  -moz-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  -o-transform: translateX(0%);
+}
+
+.nav-open .hamburger {
+  -webkit-transform: rotate(0.625turn);
+          transform: rotate(0.625turn);
+}
+
+.nav-open .hamburger::before {
+  -webkit-transform: rotate(90deg) translateX(-6px);
+          transform: rotate(90deg) translateX(-6px);
+}
+
+.nav-open .hamburger::after {
+  opacity: 0;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -135,27 +157,6 @@ header .logo__text--description {
   font-size: 0.5rem;
 }
 
-header .nav {
-  position: fixed;
-  background: #ffffff;
-  color: #707070;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 100;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-  -webkit-transition: -webkit-transform 250ms ease-in-out;
-  transition: -webkit-transform 250ms ease-in-out;
-  transition: transform 250ms ease-in-out;
-  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
-  -webkit-transition: transform 250ms ease-in-out;
-  -moz-transition: transform 250ms ease-in-out;
-  -ms-transition: transform 250ms ease-in-out;
-  -o-transition: transform 250ms ease-in-out;
-}
-
 header .nav-toggle {
   display: none;
   position: relative;
@@ -165,28 +166,6 @@ header .nav-toggle {
   cursor: pointer;
   right: 1rem;
   z-index: 1000;
-}
-
-header .nav-open .nav {
-  transform: translateX(75%);
-  -webkit-transform: translateX(75%);
-  -moz-transform: translateX(75%);
-  -ms-transform: translateX(75%);
-  -o-transform: translateX(75%);
-}
-
-header .nav-open .hamburger {
-  -webkit-transform: rotate(0.625turn);
-          transform: rotate(0.625turn);
-}
-
-header .nav-open .hamburger::before {
-  -webkit-transform: rotate(90deg) translateX(-6px);
-          transform: rotate(90deg) translateX(-6px);
-}
-
-header .nav-open .hamburger::after {
-  opacity: 0;
 }
 
 header .hamburger {
@@ -229,6 +208,56 @@ header .hamburger::after {
     height: auto;
     background: #ffffff;
     z-index: 2;
+  }
+  header .nav {
+    position: fixed;
+    background: #ffffff;
+    color: #707070;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: -webkit-transform 250ms ease-in-out;
+    transition: -webkit-transform 250ms ease-in-out;
+    transition: transform 250ms ease-in-out;
+    transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+    -webkit-transition: transform 250ms ease-in-out;
+    -moz-transition: transform 250ms ease-in-out;
+    -ms-transition: transform 250ms ease-in-out;
+    -o-transition: transform 250ms ease-in-out;
+  }
+  header .nav__list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    height: 100%;
+    font-size: 2.5rem;
+    line-height: inherit;
+    font-weight: 700;
+    color: #707070;
+    text-transform: uppercase;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
   }
   header .nav-toggle {
     display: block;
@@ -379,7 +408,7 @@ header .hamburger::after {
           flex-direction: row;
 }
 
-.portfolio .grid {
+.portfolio .container {
   width: 73.125rem;
   height: auto;
   -webkit-column-count: 3;
@@ -388,17 +417,22 @@ header .hamburger::after {
           column-gap: 20px;
 }
 
-.portfolio .grid img {
+.portfolio .container .image {
   display: inline-block;
   width: 100%;
-  margin-bottom: 20px;
+  margin-block: 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 
 @media (max-width: 1200px) {
   .portfolio .nav {
     display: none;
   }
-  .portfolio .grid {
+  .portfolio .container {
     width: 100%;
     -webkit-column-count: 2;
             column-count: 2;
@@ -406,7 +440,7 @@ header .hamburger::after {
             column-gap: 15px;
     overflow-x: visible;
   }
-  .portfolio img {
+  .portfolio .image {
     display: inline-block;
     width: 100%;
     margin-bottom: 15px;
@@ -414,7 +448,7 @@ header .hamburger::after {
 }
 
 @media (max-width: 768px) {
-  .portfolio .grid {
+  .portfolio .container {
     width: 100%;
     -webkit-column-count: 1;
             column-count: 1;
@@ -422,7 +456,7 @@ header .hamburger::after {
             column-gap: 10px;
     overflow-x: visible;
   }
-  .portfolio img {
+  .portfolio .image {
     display: inline-block;
     width: 100%;
     margin-bottom: 10px;

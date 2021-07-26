@@ -24,16 +24,21 @@
     }
   }
 
-  .grid {
+  .container {
     width: 73.125rem;
     height: auto;
     column-count: 3;
     column-gap: 20px;
 
-    img {
+    .image {
       display: inline-block;
       width: 100%;
-      margin-bottom: 20px;
+      margin-block: 10px;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
     }
   }
 
@@ -42,14 +47,14 @@
       display: none;
     }
 
-    .grid {
+    .container {
       width: 100%;
       column-count: 2;
       column-gap: 15px;
       overflow-x: visible;
     }
 
-    img {
+    .image {
       display: inline-block;
       width: 100%;
       margin-bottom: 15px;
@@ -57,14 +62,14 @@
   }
 
   @media (max-width: 768px) {
-    .grid {
+    .container {
       width: 100%;
       column-count: 1;
       column-gap: 10px;
       overflow-x: visible;
     }
 
-    img {
+    .image {
       display: inline-block;
       width: 100%;
       margin-bottom: 10px;
