@@ -33,7 +33,6 @@
     .image {
       display: inline-block;
       width: 100%;
-      background: $clr-accent;
       margin-block: 10px;
       cursor: pointer;
       transition: all 0.2s ease-in-out;
@@ -68,7 +67,7 @@
     }
 
     .image {
-      margin-bottom: 15px;
+      margin-block: 7.5px;
     }
   }
 
@@ -81,7 +80,7 @@
     }
 
     .image {
-      margin-bottom: 10px;
+      margin-block: 5px;
     }
   }
 }

@@ -523,7 +523,6 @@ header .search-box span:after {
 .portfolio .container .image {
   display: inline-block;
   width: 100%;
-  background: #ff5672;
   margin-block: 10px;
   cursor: pointer;
   -webkit-transition: all 0.2s ease-in-out;
@@ -558,7 +557,7 @@ header .search-box span:after {
     overflow-x: visible;
   }
   .portfolio .image {
-    margin-bottom: 15px;
+    margin-block: 7.5px;
   }
 }
 
@@ -572,7 +571,7 @@ header .search-box span:after {
     overflow-x: visible;
   }
   .portfolio .image {
-    margin-bottom: 10px;
+    margin-block: 5px;
   }
 }
 
