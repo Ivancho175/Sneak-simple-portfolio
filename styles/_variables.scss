@@ -9,6 +9,9 @@ $clr-accent: #ff5672;
 $fw-reg: 400;
 $fw-bold: 700;
 
+$bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+  0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+
 @mixin flexbox($justify, $align, $direction) {
   display: flex;
   justify-content: $justify;
@@ -22,4 +25,13 @@ $fw-bold: 700;
   font-weight: $weight;
   color: $color;
   text-transform: $text-transform;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
